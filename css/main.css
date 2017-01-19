@@ -1,15 +1,12 @@
 /* Testing out how to do comments in CSS, this is how you do it */
 /*There's a super annoying fat mexican bitch to my right */
 
-{
-	color: #000;
-}
-
 body {
 	background: none repeat scroll 0 0 #fff;
 	color: #222;
 	margin: 0;
 }
+
 a { color: #222;
 text-decoration: none; 
 }
@@ -96,6 +93,11 @@ a.button:hover {
 	border-radius: 5px;
 	display: block;
 }
+/* When the screen hits 628px, it'll shrink the search bar
+by 50% */
+@media screen and (max-width:628px)  {
+	.search-box input {width: 70%;}
+}
 
 /* Line 110 */
 .search-box input:focus {
@@ -136,6 +138,10 @@ a.button:hover {
 	border-top: 1px solid #e4e4e4;  
 }
 
+@media screen and (max-width:500px)  {
+	.bottom-site-links {width: 100%;}
+}
+
 .left-site-links,
 .right-site-links {
 	margin: 0;
@@ -174,3 +180,24 @@ a.button:hover {
     letter-spacing: 0.1px;
     font-size: 14px;
 }
+
+@media screen and (max-width:500px)  {
+	.right-site-links {display: none;
+		width: auto;}
+		.left-site-links {
+			margin: 10px auto;
+			float: none;
+			width: 50%;
+		}
+	}
+	/*This gets rid of the profile and and shrinks text
+	in the header*/
+	@media screen and (max-width:416px)  {
+	.profile-img {display: none;}
+	.top-navigation {font-size: 11px;}
+}
+	/* When it gets to 443px it brings the footer
+	together*/
+	@media screen and (max-width:443px)  {
+	.left-site-links {width: 65%;}
+	}
